@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+pytesseract
+pdf2image
+openai
+pillow
+sqlmodel
+sqlalchemy
+psycopg2-binary
+python-dotenv
+alembic
+python-jose[cryptography]
+passlib[bcrypt]
