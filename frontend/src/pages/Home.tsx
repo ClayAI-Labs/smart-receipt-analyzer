@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Upload, FileText, BarChart3, Clock } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+
 export default function Home() {
   const { token } = useAuth();
   const [file, setFile] = useState<File | null>(null);
@@ -34,7 +36,7 @@ export default function Home() {
     try {
       setLoading(true);
       setError("");
-      const response = await fetch("http://127.0.0.1:8000/extract", {
+      const response = await fetch(`${API_BASE_URL}/extract`, {
         method: "POST",
         body: formData,
         headers: {
@@ -62,7 +64,7 @@ export default function Home() {
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-indigo-500 to-sky-400 bg-clip-text text-transparent mb-6">
               ScanlyAI
               <span className="text-2xl md:text-3xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent block">
                 Extract. Analyze. Organize.

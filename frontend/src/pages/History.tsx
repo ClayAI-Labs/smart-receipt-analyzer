@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Search, Download, Calendar, DollarSign, Eye, EyeOff, Trash2, Filter, RefreshCw, FileText, TrendingUp, ShoppingBag } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+
 interface ReceiptItem {
   name: string;
   quantity: number;
@@ -54,7 +56,7 @@ export default function History() {
         return;
       }
 
-      const response = await fetch("http://127.0.0.1:8000/receipts", {
+      const response = await fetch(`${API_BASE_URL}/receipts`, {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -92,7 +94,7 @@ export default function History() {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/receipts/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/receipts/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`,
