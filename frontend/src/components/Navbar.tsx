@@ -29,10 +29,10 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-white tracking-tight">
-                Smart Receipt
+                ScanlyAI
               </span>
               <span className="text-xs text-blue-100 font-medium hidden sm:block">
-                Analyzer
+                Extract. Analyze. Organize.
               </span>
             </div>
           </Link>
