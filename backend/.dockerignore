@@ -1,0 +1,21 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and local config
+*.log
+.env
+
+# Git and IDE configs
+.git/
+.vscode/
+.idea/
+
+# Node-related (just in case)
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
