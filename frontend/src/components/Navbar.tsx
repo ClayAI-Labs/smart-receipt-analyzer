@@ -32,7 +32,7 @@ export default function Navbar() {
                 ScanlyAI
               </span>
               <span className="text-xs text-blue-100 font-medium hidden sm:block">
-                Extract. Analyze. Organize.
+                Scan. Analyze. Organize.
               </span>
             </div>
           </Link>
